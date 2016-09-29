@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160929185555) do
   enable_extension "plpgsql"
 
   create_table "answer_choices", force: :cascade do |t|
-    t.text     "choice",      null: false
+    t.string   "choice",      null: false
     t.integer  "question_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160929185555) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.text     "text",       null: false
+    t.string   "text",       null: false
     t.integer  "poll_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
